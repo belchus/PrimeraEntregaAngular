@@ -100,5 +100,13 @@ export class TablasComponent {
       }
     })
   }
+  delete(alumnoAEliminar: Alumno): void {
 
+    this.dataSource.data = this.dataSource.data.filter(
+  
+     (alumnoActual) => alumnoActual.id !== alumnoAEliminar.id,
+  
+    );
+  
+   }
 }
