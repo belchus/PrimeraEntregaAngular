@@ -8,7 +8,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { TablasModule } from '../pages/tablas/tablas.module';
 import { SharedModule } from '../shared/shared.module';
 import { DirectivesModule } from '../shared/directives/directives.module';
-
+import { RouterModule } from '@angular/router';
+import {MatListModule} from '@angular/material/list';
 @NgModule({
   declarations: [
     DashboardComponent
@@ -20,7 +21,9 @@ import { DirectivesModule } from '../shared/directives/directives.module';
     MatIconModule,
     MatButtonModule,
     TablasModule,
-    DirectivesModule
+    DirectivesModule,
+    RouterModule,
+    MatListModule
   ],
   exports: [
     DashboardComponent

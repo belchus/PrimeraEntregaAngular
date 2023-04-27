@@ -12,13 +12,15 @@ import { AbmAlumnosComponent } from './abm-alumnos/abm-alumnos.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DirectivesModule } from 'src/app/shared/directives/directives.module';
+import { AlumboDetalleComponent } from './alumbo-detalle/alumbo-detalle.component';
 
 
 
 @NgModule({
   declarations: [
     TablasComponent,
-    AbmAlumnosComponent
+    AbmAlumnosComponent,
+    AlumboDetalleComponent
   ],
   imports: [
     CommonModule,

@@ -1,46 +1,40 @@
+<div class="example-sidenav-content">
+
+  <mat-toolbar color="primary" class="toolbar">
+    <button
+      (click)="drawer.toggle()"
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span appFontSize>
+      MyWorkshop  </span>
+      <mat-icon>person</mat-icon>
+    <span class="example-spacer"></span>
+
+  </mat-toolbar>
+</div>
+<router-outlet>
+     
+
 <mat-drawer-container class="example-container" autosize>
 
   <mat-drawer #drawer class="example-sidenav" mode="side">
-    <p appFontSize class="sidenav">Workshop I <mat-icon>work</mat-icon></p>
-    <p *ngIf="showFiller" appFontSize class="btn">Turno Mañana 9870</p>
-   <button (click)="showFiller = !showFiller" mat-raised-button>
-   {{ showFiller ? 'Show less' : 'Show more'}}
-</button>
-
-    <p appFontSize class="sidenav">Workshop II <mat-icon>work</mat-icon></p>
-    <p *ngIf="showFiller" appFontSize class="btn">Turno Noche 8769</p>
-   <button (click)="showFiller = !showFiller" mat-raised-button>
-{{ showFiller ? 'Show less' : 'Show more'}}
-</button>
-
-    <p appFontSize class="sidenav">Workshop III <mat-icon>work</mat-icon> </p>
-    <p *ngIf="showFiller" appFontSize class="btn">Turno Tarde 6070</p>
-   <button (click)="showFiller = !showFiller" mat-raised-button>
-{{ showFiller ? 'Show less' : 'Show more'}}
-</button>
+    <mat-nav-list>
+      <a mat-list-item [routerLink]="link.path" *ngFor="let link of links">{{ link.title }}</a>
+      <a (click)="logout()" mat-list-item>Cerrar Sesion</a>
+    </mat-nav-list>
 
  
   </mat-drawer>
+  <main>
+    
+  <app-tablas></app-tablas>
+  </main>
 
-  <div class="example-sidenav-content">
-
-    <mat-toolbar color="primary" class="toolbar">
-      <button
-        (click)="drawer.toggle()"
-        mat-icon-button
-        class="example-icon"
-        aria-label="Example icon-button with menu icon"
-      >
-        <mat-icon>menu</mat-icon>
-      </button>
-      <span appFontSize>
-        MyWorkshop  </span>
-        <mat-icon>person</mat-icon>
-      <span class="example-spacer"></span>
-
-    </mat-toolbar>
-    <main>
-    <app-tablas></app-tablas>
-    </main>
-  </div>
 </mat-drawer-container>
+
+</router-outlet>
+

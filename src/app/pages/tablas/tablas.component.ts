@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { AbmAlumnosComponent } from './abm-alumnos/abm-alumnos.component';
+import { Router } from '@angular/router';
 
 export interface Alumno {
   id: number;
@@ -75,16 +76,18 @@ export class TablasComponent {
   ];
   dataSource = new MatTableDataSource(this.estudiantes);
 
-  displayedColumns: string[] = ['id', 'nombreCompleto','email', 'promedio','fecha_registro','delete'];
+  displayedColumns: string[] = ['id', 'nombreCompleto','email', 'promedio','fecha_registro','delete','ver_detalle'];
 
   aplicarFiltros(ev: Event): void {
     const inputValue = (ev.target as HTMLInputElement)?.value;
     this.dataSource.filter = inputValue?.trim()?.toLowerCase();
   }
 
-  constructor(private matDialog: MatDialog) {}
+  constructor(private matDialog: MatDialog,private router:Router) {}
 
-
+irAlDetalle(alumnoId:number):void{
+  this.router.navigate(['dashboard','estudiantes',alumnoId])
+}
   abrirABMAlumnos(): void {
     const dialog = this.matDialog.open(AbmAlumnosComponent)
     dialog.afterClosed().subscribe((valor) => {
@@ -109,4 +112,5 @@ export class TablasComponent {
     );
   
    }
+
 }
