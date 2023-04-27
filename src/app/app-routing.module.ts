@@ -4,6 +4,7 @@ import { RouterModule,Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TablasComponent } from './pages/tablas/tablas.component';
 import { AbmAlumnosComponent } from './pages/tablas/abm-alumnos/abm-alumnos.component';
+import { AlumboDetalleComponent } from './pages/tablas/alumbo-detalle/alumbo-detalle.component';
 
 const routes:Routes =[
 {
@@ -21,6 +22,10 @@ const routes:Routes =[
       path:'formularios',
       component:AbmAlumnosComponent
     },
+    {
+      path:'estudiantes/:id',
+      component:AlumboDetalleComponent
+    }
   ]
 }
 ]

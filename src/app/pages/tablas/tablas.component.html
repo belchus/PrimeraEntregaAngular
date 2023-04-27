@@ -40,6 +40,15 @@
   </ng-container>
 
 
+  <ng-container matColumnDef="edit">
+    <th appFontSize mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let usuario">   <div class="add">
+      <button (click)="editarAlumno(usuario)" mat-flat-button>
+        <mat-icon>edit</mat-icon>
+  
+      </button>
+  </div>
+  </ng-container>
   <ng-container matColumnDef="ver_detalle">
     <th appFontSize mat-header-cell *matHeaderCellDef></th>
     <td mat-cell *matCellDef="let usuario">   <div class="add">

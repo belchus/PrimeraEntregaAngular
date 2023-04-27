@@ -10,8 +10,8 @@ const links:NavItem[]=[
         icon: 'person',
     },
     {
-        path:'cards',
-        title:'Tarjetas'
+        path:'cursos',
+        title:'Cursos'
     },
 
 ]

@@ -76,7 +76,7 @@ export class TablasComponent {
   ];
   dataSource = new MatTableDataSource(this.estudiantes);
 
-  displayedColumns: string[] = ['id', 'nombreCompleto','email', 'promedio','fecha_registro','delete','ver_detalle'];
+  displayedColumns: string[] = ['id', 'nombreCompleto','email', 'promedio','fecha_registro','delete','ver_detalle','edit'];
 
   aplicarFiltros(ev: Event): void {
     const inputValue = (ev.target as HTMLInputElement)?.value;
@@ -112,5 +112,22 @@ irAlDetalle(alumnoId:number):void{
     );
   
    }
-
+   editarAlumno(alumnoParaEditar: Alumno): void {
+    const dialog = this.matDialog.open(AbmAlumnosComponent, {
+      data: {
+        alumnoParaEditar
+      }
+    });
+    dialog.afterClosed().subscribe((valorDelFormulario) => {
+      if (valorDelFormulario) {
+        this.dataSource.data = this.dataSource.data.map(
+          (alumnoActual) => alumnoActual.id === alumnoParaEditar.id
+            ? ({ ...alumnoActual, ...valorDelFormulario})
+            : alumnoActual,
+        );
+      }
+    })
+  }
 }
+
+
