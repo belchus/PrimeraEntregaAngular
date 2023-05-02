@@ -66,7 +66,7 @@ export class CursosComponent {
     constructor(private matDialog: MatDialog,private router:Router,private activateRoute:ActivatedRoute) {}
     
     irAlDetalle(alumnoId:number):void{
-      this.router.navigate(['dashboard','estudiantes',alumnoId],{relativeTo: this.activateRoute,queryParams:{
+      this.router.navigate(['dashboard','cursos',alumnoId],{relativeTo: this.activateRoute,queryParams:{
         page:1,
         limit:50,
       }})
