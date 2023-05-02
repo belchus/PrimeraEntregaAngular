@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { NombreCompletoPipe } from './nombre-completo.pipe';
 import { ControlErrorMessagesPipe } from './control-error-messages.pipe';
 
-
-
 @NgModule({
   declarations: [
     NombreCompletoPipe,
@@ -16,6 +14,6 @@ import { ControlErrorMessagesPipe } from './control-error-messages.pipe';
   exports:[
     NombreCompletoPipe,
     ControlErrorMessagesPipe
-    ]
+  ]
 })
 export class PipesModule { }

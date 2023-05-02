@@ -10,6 +10,8 @@ import { SharedModule } from '../shared/shared.module';
 import { DirectivesModule } from '../shared/directives/directives.module';
 import { RouterModule } from '@angular/router';
 import {MatListModule} from '@angular/material/list';
+import { CursosComponent } from '../pages/cursos/cursos.component';
+import { CursosModule } from '../pages/cursos/cursos.module';
 @NgModule({
   declarations: [
     DashboardComponent
@@ -23,7 +25,8 @@ import {MatListModule} from '@angular/material/list';
     TablasModule,
     DirectivesModule,
     RouterModule,
-    MatListModule
+    MatListModule,
+    CursosModule
   ],
   exports: [
     DashboardComponent

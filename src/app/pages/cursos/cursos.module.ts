@@ -11,16 +11,19 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { DirectivesModule } from 'src/app/shared/directives/directives.module';
 import { AbmCursosComponent } from './abm-cursos/abm-cursos.component';
 import { CursosComponent } from './cursos.component';
+import { CursoDetalleComponent } from './curso-detalle/curso-detalle.component';
 
 
 @NgModule({
   declarations: [
     AbmCursosComponent,
-    CursosComponent
+    CursosComponent,
+    CursoDetalleComponent
 
   ],
   imports: [
-    CommonModule, MatTableModule,
+    CommonModule,
+    MatTableModule,
     PipesModule,
     MatFormFieldModule,
     MatIconModule,

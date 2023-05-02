@@ -11,10 +11,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PipesModule } from '../shared/pipes/pipes.module';
 import { RegisterComponent } from './pages/register/register.component';
+import { LoginModule } from './pages/login/login.module';
 
 const routes: Routes = [
   {
-    path: 'login',
+    path: 'logout',
     component: LoginComponent,
   },
   {
@@ -30,7 +31,6 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AuthComponent,
-    LoginComponent,
   ],
   imports: [
     CommonModule,
@@ -40,6 +40,7 @@ const routes: Routes = [
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
+    LoginModule,
     MatButtonModule,
     MatIconModule,
   ]

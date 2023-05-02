@@ -18,7 +18,7 @@ export interface Curso {
 })
 export class CursosComponent {
 
-    estudiantes: Curso[] = [
+    cursos: Curso[] = [
         {
           id: 1,
           nombre: 'Python',
@@ -56,7 +56,7 @@ export class CursosComponent {
         },
         
       ];
-      dataSource = new MatTableDataSource(this.estudiantes);
+      dataSource = new MatTableDataSource(this.cursos);
      displayedColumns: string[] = ['id', 'nombre','profesor', 'vacantes','fecha_inicio','delete','ver_detalle','edit'];
     
      aplicarFiltros(ev: Event): void {

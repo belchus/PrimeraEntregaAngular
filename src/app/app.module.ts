@@ -8,12 +8,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { PipesModule } from './shared/pipes/pipes.module';
 import { AbmCursosComponent } from './pages/cursos/abm-cursos/abm-cursos.component';
 import { CursosComponent } from './pages/cursos/cursos.component';
-
+import { CursosModule } from './pages/cursos/cursos.module';
 @NgModule({
   declarations: [
     AppComponent,
-    AbmCursosComponent,
-    CursosComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +19,8 @@ import { CursosComponent } from './pages/cursos/cursos.component';
     DashboardModule,
     NgbModule,
     AppRoutingModule,
-    PipesModule
+    PipesModule,    
+    //CursosModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
