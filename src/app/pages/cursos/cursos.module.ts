@@ -20,7 +20,8 @@ import { CursosComponent } from './cursos.component';
 
   ],
   imports: [
-    CommonModule, MatTableModule,
+    CommonModule,
+    MatTableModule,
     PipesModule,
     MatFormFieldModule,
     MatIconModule,

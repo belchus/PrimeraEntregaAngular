@@ -16,6 +16,6 @@ import { ControlErrorMessagesPipe } from './control-error-messages.pipe';
   exports:[
     NombreCompletoPipe,
     ControlErrorMessagesPipe
-    ]
+  ]
 })
 export class PipesModule { }
