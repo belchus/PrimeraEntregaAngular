@@ -5,19 +5,23 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { AppRoutingModule } from './app-routing.module';
-import { LoginComponent } from './auth/pages/login/login.component';
+import { PipesModule } from './shared/pipes/pipes.module';
+import { AbmCursosComponent } from './pages/cursos/abm-cursos/abm-cursos.component';
+import { CursosComponent } from './pages/cursos/cursos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    AbmCursosComponent,
+    CursosComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     DashboardModule,
     NgbModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PipesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -19,8 +19,7 @@ constructor(
   
 }
 logout():void{
-  
-  this.router.navigate(['auth','login'])
+  this.router.navigateByUrl('auth/login')
 }
 
 }

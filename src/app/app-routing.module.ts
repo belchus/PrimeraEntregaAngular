@@ -5,6 +5,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { TablasComponent } from './pages/tablas/tablas.component';
 import { AbmAlumnosComponent } from './pages/tablas/abm-alumnos/abm-alumnos.component';
 import { AlumboDetalleComponent } from './pages/tablas/alumbo-detalle/alumbo-detalle.component';
+import { AuthComponent } from './auth/auth.component';
+import { LoginComponent } from './auth/pages/login/login.component';
+import { CursosComponent } from './pages/cursos/cursos.component';
 
 const routes:Routes =[
 {
@@ -14,13 +17,10 @@ const routes:Routes =[
     {
       path:'estudiantes',
       component:TablasComponent
-    },{
-      path:'cards',
-      component:TablasComponent
     },
     {
-      path:'formularios',
-      component:AbmAlumnosComponent
+      path:'cursos',
+      component:CursosComponent
     },
     {
       path:'estudiantes/:id',

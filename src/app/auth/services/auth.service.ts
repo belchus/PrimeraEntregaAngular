@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, BehaviorSubject, map, catchError, throwError } from 'rxjs';
-import { Usuario } from 'src/app/models/alumnos.model';
+import { Usuario } from 'src/app/core/models/alumnos.model';
 import { enviroment } from 'src/enviroments/enviroments.prod';
 
 
