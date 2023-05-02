@@ -12,7 +12,7 @@ import { CursoDetalleComponent } from './pages/cursos/curso-detalle/curso-detall
 
 const routes:Routes =[
 {
-  path:'dashboard',
+  path:'',
   component:DashboardComponent,
   children: [
     {
@@ -36,6 +36,9 @@ const routes:Routes =[
   {
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
+  },{
+    path: 'logout',
+   component:LoginComponent
   }
 ]
 
