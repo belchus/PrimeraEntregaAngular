@@ -12,6 +12,8 @@ import { RouterModule } from '@angular/router';
 import {MatListModule} from '@angular/material/list';
 import { CursosComponent } from '../pages/cursos/cursos.component';
 import { CursosModule } from '../pages/cursos/cursos.module';
+import { LoginComponent } from '../auth/pages/login/login.component';
+import { LoginModule } from '../auth/pages/login/login.module';
 @NgModule({
   declarations: [
     DashboardComponent
@@ -26,7 +28,8 @@ import { CursosModule } from '../pages/cursos/cursos.module';
     DirectivesModule,
     RouterModule,
     MatListModule,
-    CursosModule
+    CursosModule,
+    LoginModule
   ],
   exports: [
     DashboardComponent

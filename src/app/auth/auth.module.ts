@@ -15,7 +15,7 @@ import { LoginModule } from './pages/login/login.module';
 
 const routes: Routes = [
   {
-    path: 'logout',
+    path: 'login',
     component: LoginComponent,
   },
   {
@@ -24,7 +24,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'login',
+    redirectTo: 'dashboard',
   }
 ]
 

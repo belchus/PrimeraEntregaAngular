@@ -20,7 +20,8 @@ import { CursosModule } from './pages/cursos/cursos.module';
     NgbModule,
     AppRoutingModule,
     PipesModule,    
-    //CursosModule,
+    CursosModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

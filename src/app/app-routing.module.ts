@@ -18,7 +18,7 @@ const routes:Routes =[
       component:TablasComponent,
       children:[
       {
-        path:'dashboard/estudiantes/:id',
+        path:':id',
         component:AlumboDetalleComponent
       },
       ]
@@ -28,7 +28,7 @@ const routes:Routes =[
       component:CursosComponent,
       children:[
         {
-          path:'dashboard/cursos/:id',
+          path:':id',
           component:CursoDetalleComponent
         },
       ]

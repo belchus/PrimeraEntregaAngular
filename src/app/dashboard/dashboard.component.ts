@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Injectable, inject } from '@angular/core';
 import links from './nav-items';
 import { Router } from '@angular/router';
-
+@Injectable({
+  providedIn: 'root'
+})
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
