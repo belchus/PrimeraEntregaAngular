@@ -16,26 +16,23 @@ const routes:Routes =[
     {
       path:'estudiantes',
       component:TablasComponent,
-      children:[
+    },
       {
-        path:':id',
+        path:'estudiantes/:id',
         component:AlumboDetalleComponent
       },
-      ]
-    },
+     
     {
       path:'cursos',
       component:CursosComponent,
-      children:[
-        {
-          path:':id',
-          component:CursoDetalleComponent
-        },
-      ]
     },
-    
+    {
+      path:'cursos/:id',
+      component:CursoDetalleComponent
+    },
   ]
-  },
+  
+    },
   {
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
