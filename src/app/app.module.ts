@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { PipesModule } from './shared/pipes/pipes.module';
 import { AbmCursosComponent } from './pages/cursos/abm-cursos/abm-cursos.component';
 import { CursosComponent } from './pages/cursos/cursos.component';
+import { HttpClientModule } from '@angular/common/http';
 import { CursosModule } from './pages/cursos/cursos.module';
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { CursosModule } from './pages/cursos/cursos.module';
     AppRoutingModule,
     PipesModule,    
     CursosModule,
+    HttpClientModule
     
   ],
   providers: [],
